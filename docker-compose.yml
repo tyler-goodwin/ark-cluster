@@ -1,0 +1,75 @@
+version: '2.1'
+services:
+  crystalisles:
+    image: thmhoag/arkserver:latest
+    ports:
+      - 7778:7778
+      - 7778:7778/udp
+      - 27015:27015
+      - 27015:27015/udp
+    environment:
+      am_ark_SessionName: SulleysBigHouseOfFun
+      am_serverMap: CrystalIsles
+      am_ark_QueryPort: 27015
+      am_ark_Port: 7778
+    env_file:
+      - ./creds.env
+      - ./settings.env
+    volumes:
+      - ./gamedata:/ark
+      - ./steamappsdata:/home/steam/.steam/SteamApps/workshop
+      - ./clusters:/clusters
+    ulimits:
+      nofile:
+        soft: 1000000
+        hard: 1000000
+    restart: always
+  thecenter:
+    image: thmhoag/arkserver:latest
+    ports:
+      - 7777:7777
+      - 7777:7777/udp
+      - 27017:27017
+      - 27017:27017/udp
+    environment:
+      am_ark_SessionName: SulleysBigCentralHouseOfFun
+      am_serverMap: TheCenter
+      am_ark_QueryPort: 27017
+      am_ark_Port: 7777
+    env_file:
+      - ./creds.env
+      - ./settings.env
+    volumes:
+      - ./the-center-gamedata:/ark
+      - ./the-center-steamappsdata:/home/steam/.steam/SteamApps/workshop
+      - ./clusters:/clusters
+    ulimits:
+      nofile:
+        soft: 1000000
+        hard: 1000000
+    restart: always
+
+  island:
+    image: thmhoag/arkserver:latest
+    ports:
+      - 7776:7776
+      - 7776:7776/udp
+      - 27016:27016
+      - 27016:27016/udp
+    environment:
+      am_ark_SessionName: SulleysBigIslandOfFun
+      am_serverMap: TheIsland
+      am_ark_QueryPort: 27016
+      am_ark_Port: 7776
+    env_file:
+      - ./creds.env
+      - ./settings.env
+    volumes:
+      - ./island-gamedata:/ark
+      - ./island-steamappsdata:/home/steam/.steam/SteamApps/workshop
+      - ./clusters:/clusters
+    ulimits:
+      nofile:
+        soft: 1000000
+        hard: 1000000
+    restart: always

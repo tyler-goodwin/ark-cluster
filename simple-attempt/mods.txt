@@ -1,0 +1,22 @@
+Better beacons 2.0
+Hg stacking mod 5000-90 v313
+Awesome spyglass
+Any colour sets
+Auto engram
+Shiny dinos (you can probs ditch)
+Dino storage v2
+Rare sightings
+Classic flyers
+Structures plus (s+)
+
+
+849985437,895711211,1404697612,1428596566,1609138312,2302876995,506506101,731604991
+
+ 2302876995: [Content/Mods]       Any Colour Sets
+  895711211: [Content/Mods]       Classic Flyers
+  731604991: [Content/Mods]       Structures Plus (S+)
+ 1609138312: [Content/Mods]       Dino Storage v2
+  849985437: [Content/Mods]       HG Stacking Mod 5000-90 V313
+ 1404697612: [Content/Mods]       Awesome SpyGlass!
+ 1428596566: [Content/Mods]       Auto Engrams!
+  506506101: [Content/Mods]       Better Beacons 2.0
