@@ -19,6 +19,8 @@ services:
       - ./gamedata:/ark
       - ./steamappsdata:/home/steam/.steam/SteamApps/workshop
       - ./clusters:/clusters
+      - ./Game.ini:/ark/config/Game.ini:ro
+      - ./GameUserSettings.ini:/ark/config/GameUserSettings.ini:ro
     ulimits:
       nofile:
         soft: 1000000
@@ -43,6 +45,8 @@ services:
       - ./the-center-gamedata:/ark
       - ./the-center-steamappsdata:/home/steam/.steam/SteamApps/workshop
       - ./clusters:/clusters
+      - ./Game.ini:/ark/config/Game.ini:ro
+      - ./GameUserSettings.ini:/ark/config/GameUserSettings.ini:ro
     ulimits:
       nofile:
         soft: 1000000
@@ -68,6 +72,8 @@ services:
       - ./island-gamedata:/ark
       - ./island-steamappsdata:/home/steam/.steam/SteamApps/workshop
       - ./clusters:/clusters
+      - ./Game.ini:/ark/config/Game.ini:ro
+      - ./GameUserSettings.ini:/ark/config/GameUserSettings.ini:ro
     ulimits:
       nofile:
         soft: 1000000
